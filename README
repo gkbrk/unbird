@@ -1,0 +1,41 @@
+unbird
+======
+
+Utility to turn Bird-style Literate Programming documents into code.
+
+1. Usage
+
+  The code takes input from a file or from standard input, and outputs the code
+  to standard output. It can be used as follows.
+
+  unbird test.py.bird > test.py
+
+  cat test.py.bird | unbird > test.py
+
+2. Building
+
+  The program can be built with the included Makefile. The default rule should
+  create an executable `./bin/unbird`.
+
+3. Testing
+
+  There's currently no automated testing available, but there are some example
+  files included with the source code. You can run the command below and see if
+  the result looks reasonable.
+
+  find test/ -type f -exec printf "-- %s \n\n" {} \; -exec ./bin/unbird {} \;
+
+4. License
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>.

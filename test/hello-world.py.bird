@@ -1,0 +1,15 @@
+This is a test file to show how to print "Hello World" in the Python
+programming language.
+
+The first way we'll do this is by hardcoding the string.
+
+> print("Hello, World!")
+
+But as you can see, this will not scale. It is much better to write a method
+that can handle greeting different entities.
+
+> def greet(name="World"):
+>   print(f"Hello, {name}!")
+>
+> greet() # Prints Hello, World!
+> greet("Leo") # Prints Hello, Leo!
